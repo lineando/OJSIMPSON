@@ -1,60 +1,128 @@
+/* reset simples */
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #111;
-  color: #f5f5f5;
-  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height:1.6;
 }
 
-header {
-  background: #222;
-  padding: 1rem;
-  text-align: center;
+.container {
+  width:90%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: #ffcc00;
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top:0;
+  z-index:100;
 }
 
-nav {
-  margin-top: 0.5rem;
+.site-title {
+  font-size:2rem;
+  padding:20px 0;
 }
 
-nav a {
-  color: #f5f5f5;
-  margin: 0 10px;
+.site-nav {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.site-nav a {
   text-decoration: none;
+  color: #555;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #ffcc00;
+.site-nav a:hover {
+  color: #d95a2a; /* cor de destaque */
 }
 
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
+.hero {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
-section {
-  margin-bottom: 2rem;
+.hero-text {
+  flex:1;
 }
 
-h2 {
-  color: #ffcc00;
-  border-bottom: 2px solid #444;
-  padding-bottom: 0.3rem;
+.hero-text h2 {
+  font-size:2.5rem;
+  color: #222;
+  margin-bottom: 10px;
 }
 
-footer {
-  background: #222;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: 2rem;
+.hero-text p {
+  font-size:1.1rem;
+  margin-bottom: 20px;
 }
+
+.btn-primary {
+  display: inline-block;
+  background-color: #d95a2a;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.hero-image img {
+  width:100%;
+  max-width:400px;
+  border-radius:8px;
+  object-fit:cover;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  font-size:2rem;
+  color: #222;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom:8px;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap:20px;
+}
+
+.card {
+  background: #fff;
+  border-radius:8px;
+  padding:20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color:#d95a2a;
+  margin-bottom:10px;
+}
+
+.card p {
+  color:#555;
+}
+
+.site-footer {
+  background:#ffffff;
+  border-top:1px solid #ddd;
+  padding:20px 0;
+  text-align:center;
+  margin-top:40px;
+}
+
