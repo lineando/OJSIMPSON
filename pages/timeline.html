@@ -11,48 +11,79 @@
     <div class="container header-inner">
       <h1 class="site-title">O Caso O.J. Simpson</h1>
       <nav class="site-nav">
-        <a href="/index.html">Início</a>
+        <a href="../index.html">Início</a>
+        <a href="timeline.html" class="active">Linha do Tempo</a>
         <a href="provas.html">Provas</a>
         <a href="personagens.html">Personagens</a>
         <a href="analise.html">Análise</a>
         <a href="multimidia.html">Multimídia</a>
+        <a href="referencias.html">Referências</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="section">
-      <h2>Linha do Tempo — Eventos Principais</h2>
+      <h2>Timeline / Key Events</h2>
 
-      <article class="timeline-item">
-        <h3>12 de junho de 1994 — Crime</h3>
-        <p>Nicole Brown Simpson e Ronald Goldman são encontrados mortos na casa de Nicole, em Los Angeles.</p>
-      </article>
+      <div class="timeline" aria-label="Linha do tempo do caso O.J. Simpson">
+        <div class="timeline-line" aria-hidden="true"></div>
 
-      <article class="timeline-item">
-        <h3>17 de junho de 1994 — Perseguição</h3>
-        <p>Fuga de O.J. Simpson em baixa velocidade numa Bronco branca, transmitida ao vivo; ampla cobertura da mídia.</p>
-      </article>
+        <div class="timeline-items">
+          <div class="timeline-item" tabindex="0" aria-describedby="ev1">
+            <div class="timeline-dot" role="img" aria-hidden="true"></div>
+            <div class="timeline-label"><strong>12 Jun 1994</strong><br>Crime</div>
+            <div id="ev1" class="timeline-popup" role="region" aria-label="Descrição">
+              Nicole Brown Simpson e Ronald Goldman são encontrados mortos na casa de Nicole, em Los Angeles.
+            </div>
+          </div>
 
-      <article class="timeline-item">
-        <h3>24 de junho de 1994 — Acusação formal</h3>
-        <p>O.J. é formalmente indiciado pelos assassinatos; processo inicia-se com forte atenção pública.</p>
-      </article>
+          <div class="timeline-item" tabindex="0" aria-describedby="ev2">
+            <div class="timeline-dot" role="img" aria-hidden="true"></div>
+            <div class="timeline-label"><strong>17 Jun 1994</strong><br>Perseguição</div>
+            <div id="ev2" class="timeline-popup" role="region" aria-label="Descrição">
+              Fuga de O.J. Simpson em baixa velocidade numa Bronco branca, transmitida ao vivo; ampla cobertura da mídia.
+            </div>
+          </div>
 
-      <article class="timeline-item">
-        <h3>1995 — Julgamento criminal</h3>
-        <p>Julgamento televisado; júri declara O.J. Simpson <strong>não culpado</strong> em outubro de 1995.</p>
-      </article>
+          <div class="timeline-item" tabindex="0" aria-describedby="ev3">
+            <div class="timeline-dot" role="img" aria-hidden="true"></div>
+            <div class="timeline-label"><strong>24 Jun 1994</strong><br>Acusação formal</div>
+            <div id="ev3" class="timeline-popup" role="region" aria-label="Descrição">
+              O.J. é formalmente indiciado pelos assassinatos; processo inicia-se com forte atenção pública.
+            </div>
+          </div>
 
-      <article class="timeline-item">
-        <h3>1997 — Processo civil</h3>
-        <p>Famílias das vítimas vencem ação civil contra Simpson por responsabilidade civil e recebem indenização.</p>
-      </article>
+          <div class="timeline-item" tabindex="0" aria-describedby="ev4">
+            <div class="timeline-dot" role="img" aria-hidden="true"></div>
+            <div class="timeline-label"><strong>1995</strong><br>Julgamento criminal</div>
+            <div id="ev4" class="timeline-popup" role="region" aria-label="Descrição">
+              Julgamento televisado; júri declara O.J. Simpson não culpado em outubro de 1995.
+            </div>
+          </div>
 
-      <article class="timeline-item">
-        <h3>Legado</h3>
-        <p>O caso transformou debates sobre raça, mídia e violência doméstica; influenciou política pública e produção cultural.</p>
-      </article>
+          <div class="timeline-item" tabindex="0" aria-describedby="ev5">
+            <div class="timeline-dot" role="img" aria-hidden="true"></div>
+            <div class="timeline-label"><strong>1997</strong><br>Processo civil</div>
+            <div id="ev5" class="timeline-popup" role="region" aria-label="Descrição">
+              Famílias das vítimas vencem ação civil contra Simpson por responsabilidade civil e recebem indenização.
+            </div>
+          </div>
+
+          <div class="timeline-item" tabindex="0" aria-describedby="ev6">
+            <div class="timeline-dot" role="img" aria-hidden="true"></div>
+            <div class="timeline-label"><strong>Legado</strong></div>
+            <div id="ev6" class="timeline-popup" role="region" aria-label="Descrição">
+              O caso transformou debates sobre raça, mídia e violência doméstica; influenciou política pública e produção cultural.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:18px; color:var(--muted);">
+        Passe o mouse ou navegue com <kbd>Tab</kbd> para ver detalhes de cada evento.
+      </p>
+
     </section>
   </main>
 
@@ -61,5 +92,14 @@
       <p>© 2025 - Conteúdo informativo.</p>
     </div>
   </footer>
+
+  <!-- small JS to improve keyboard experience (optional but useful) -->
+  <script>
+    // Add focus class so keyboard users get same visual effect as hover
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      item.addEventListener('focus', () => item.classList.add('focused'));
+      item.addEventListener('blur', () => item.classList.remove('focused'));
+    });
+  </script>
 </body>
 </html>
